@@ -3,11 +3,11 @@ let times = document.querySelector('.times');
 let mobileNav = document.querySelector('.mobile-nav');
 let home= document.getElementById('m-home');
 let about= document.getElementById('m-about');
+let skills= document.getElementById('m-skills');
+let cert= document.getElementById('m-cert');
 let services= document.getElementById('m-services');
-let work= document.getElementById('m-work');
-let blogs= document.getElementById('m-blogs');
+let project= document.getElementById('m-project');
 let contact= document.getElementById('m-contact');
-
 hamberger.addEventListener('click',function(){
   mobileNav.classList.add('open');
 });
@@ -22,12 +22,18 @@ home.addEventListener('click',function(){
 about.addEventListener('click',function(){
     mobileNav.classList.remove('open');
 });
+skills.addEventListener('click',function(){
+    mobileNav.classList.remove('open');
+});
+cert.addEventListener('click',function(){
+    mobileNav.classList.remove('open');
+});
 services.addEventListener('click',function(){
     mobileNav.classList.remove('open');
 });
-work.addEventListener('click',function(){
+project.addEventListener('click',function(){
     mobileNav.classList.remove('open');
 });
-blogs.addEventListener('click',function(){
+contact.addEventListener('click',function(){
     mobileNav.classList.remove('open');
 });

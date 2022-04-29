@@ -25,9 +25,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
 .container {
-  max-width: 1152px;
+  max-width: 1270px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -38,12 +37,21 @@ html {
   margin-bottom: 1rem;
   line-height: 0.5;
 }
+.main-contact{
+  text-decoration: none;
+}
+.btn-contact:hover a{
+  color:#3DCFD3;
+}
+.main-contact:hover{
+  color: #3DCFD3;
+}
 
 .section-heading span {
   color: var(--primary);
 }
 
-/*media queries -------------------------------------------------*/
+/*media queries -------------------------------------------------
 @media (min-width:576px) {
   .container {
     max-width: 540px;
@@ -65,17 +73,19 @@ html {
 @media (min-width:1200px) {
   .container {
     max-width: 1152px;
-  }
-}
+  }  
+} */
 
 /* dark header---------------------------------------------------header */
-header .branding img {
-  height: 3rem;
-  width: 8.2rem;
+header .branding img{
+height: 3rem;
+width: 8rem;
 }
-
+header #main-nav{
+  
+}
 header {
-  background: var(--dark);
+  background: black;
   height: 698px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 90%, 0 100%);
 }
@@ -84,8 +94,10 @@ header .hero {
   padding-top: 4rem;
 }
 
-header .hero .left img {
-  width: 280px;
+header .hero .left .video {
+  width: 457px;
+  height: 300px;
+  margin-bottom: 3rem;
 }
 
 header .hero .right {
@@ -143,7 +155,6 @@ header nav .branding {
 .about {
   padding: 5rem 0;
 }
-
 .about-image {
   height: 400px;
   margin: 1rem 4rem;
@@ -203,10 +214,84 @@ header nav .branding {
 .about .social a:hover {
   background: var(--primary);
 }
+/*skills ----------------------------------*/
+.skills{
+  padding: 5rem;
+  background-color: var(--light);
+}
+.skills .section-paragraph {
+  color: var(--ternary);
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+.skills .container .skills-info .skills-logo{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 2rem 0;
+  margin-top: 1rem;
+}
+.skills .container .skills-info .skills-logo .html{
+  height: 4.5rem;
+  width: 7.5rem;
+}
+.skills .container .skills-info .skills-logo .css{
+  height: 4.5rem;
+  width: 7rem;
+}
+.skills .container .skills-info .skills-logo .js{
+  height: 4.5rem;
+  width: 7rem;
+}
+.skills .container .skills-info .skills-logo .bootstrap{
+  height: 4.1rem;
+  width: 5.4rem;
+  margin:0 1rem;
+}
+.skills .container .skills-info .skills-logo .react{
+  height: 4.8rem;
+  width: 5.5rem;
+}
+.skills .container .skills-info .skills-logo .java{
+  height: 4.8rem;
+  width: 6rem;
+}
+.skills .container .skills-info .skills-logo .dbms{
+  height: 4.7rem;
+  width: 5rem;
+  border-radius:50px;
+  margin-left: 0.9rem;
+}
+.skills .container .skills-info .soft-skills{
+  color: var(--ternary);
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin-top: 0.9rem;
+}
 
+/*certifications*/
+.cert{
+  padding: 4.3rem;
+}
+.cert .section-paragraph {
+  color: var(--ternary);
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.cert .container .cert-info{
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+}
+.cert .container .cert-info img{
+  height: 8rem;
+  width: 6rem;
+
+}
 /*services-------------------------------------------------------SERVICES*/
 .services {
-  padding: 5rem;
+  padding: 4.3rem;
   background-color: var(--light);
 }
 
@@ -227,32 +312,49 @@ header nav .branding {
 }
 
 .services .card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2.5rem;
-  margin: 0 3rem;
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
 }
 
 .services .card-wrapper .card {
   padding: 4rem 2rem;
-  text-align: center;
   position: relative;
   box-shadow: 10px 10px 5px #aaaaaa6b;
   background-color: var(--pure);
+  height: 16rem;
+  width: 24rem;
 }
 
 .services .card-wrapper .card h2 {
   margin: 0.5rem 0;
-  font-weight: 400;
   font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-align: center;
 }
-
+.services .card-wrapper .card .intern-place{
+text-align: center;
+font-size: 0.9rem;
+margin-bottom: 1rem;
+}
 .services .card-wrapper .card p {
   font-family: 'Lato', sans-serif;
   color: var(--ternary);
   line-height: 1.6;
+  text-align: left;
+  font-size: 0.93rem;
+  margin-bottom: 0.8rem;
 }
-
+.services .card-wrapper .card a{
+  color: #070606bf;
+  text-decoration: none;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.services .card-wrapper .card a:hover{
+  color:#3DCFD3;
+}
 /*parallax */
 .parallax {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/camera.png');
@@ -282,71 +384,14 @@ header nav .branding {
   margin-bottom: 2rem;
 }
 
-/*work */
-.work {
-  padding: 5rem;
-}
-
-.work .section-paragraph {
-  color: var(--ternary);
-  font-family: 'Lato', sans-serif;
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-.work .card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin: 0 3rem;
-}
-
-.work .card-wrapper .card {
-  position: relative;
-  height: 230px;
-}
-
-.work .card-wrapper .card:hover .overlay {
-  opacity: 1;
-}
-
-.work .card-wrapper .card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(61, 207, 211, 0.9);
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  opacity: 0;
-  transition: all .3s ease;
-}
-
-.work .card-wrapper .card .overlay a {
-  color: var(--secondary);
-  text-decoration: none;
-}
-
-.work .card-wrapper .card .overlay span {
-  color: var(--light);
-}
-
-.work .card-wrapper .card img {
-  height: 100%;
-  width: 100%;
-}
-
 /*blog */
-.blog {
+.project {
   background-color: var(--dark);
   padding-bottom: 9rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 71% 93%, 0 100%);
 }
 
-.blog .section-blog-heading {
+.project  .section-project-heading {
   padding-top: 5rem;
   color: var(--pure);
   text-align: center;
@@ -354,11 +399,11 @@ header nav .branding {
   line-height: 0.5;
 }
 
-.blog .section-blog-heading span {
+.project .section-project-heading span {
   color: var(--primary);
 }
 
-.blog .section-paragraph {
+.project .section-paragraph {
   font-family: 'Lato', sans-serif;
   color: var(--ternary);
   line-height: 1.9rem;
@@ -366,56 +411,63 @@ header nav .branding {
   margin-bottom: 3rem;
 }
 
-.blog .card-wrapper {
+.project  .card-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
   margin: 0 1.6rem;
 }
 
-.blog .card-wrapper .card {
+.project  .card-wrapper .card {
   background-color: var(--pure);
 }
-
-.blog .card-wrapper .card .img-wrapper img {
+.project  .card-wrapper .card .img-wrapper{
+  height: 17rem;
+}
+.project  .card-wrapper .card .img-wrapper img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-
-.blog .card-wrapper .card .card-content {
+.project .card-wrapper .card .img-wrapper img:hover{
+  transform: scale(0.92);
+}
+.project .card-wrapper .card .card-content {
   padding: 1.5rem 1rem;
 }
 
-.blog .card-wrapper .card .card-content h1 {
+.project .card-wrapper .card .card-content h1 {
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-.blog .card-wrapper .card .card-content a {
+.project  .card-wrapper .card .card-content a {
   color: var(--secondary);
   text-decoration: none;
 }
 
-.blog .card-wrapper .card .card-content a:hover {
+.project  .card-wrapper .card .card-content a:hover {
   color: var(--primary);
 }
 
-.blog .card-wrapper .card .card-content span {
+.project  .card-wrapper .card .card-content span {
   color: var(--ternary);
   font-size: 0.9rem;
 }
 
-.blog .card-wrapper .card .card-content p {
+.project  .card-wrapper .card .card-content p {
   font-family: 'Lato', sans-serif;
   color: var(--ternary);
   margin: 1rem 0;
+  font-size: 0.85rem;
 }
 
-.blog .card-wrapper .card .card-content a.read-more {
+.project  .card-wrapper .card .card-content a.read-more {
   font-size: 0.9rem;
 }
-
+.project .card-wrapper .card .card-content i{
+  font-size: 1.3rem;
+}
 /*contact */
 .contact {
   padding: 4rem 3rem;
@@ -424,7 +476,7 @@ header nav .branding {
 .contact .section-paragraph {
   color: var(--ternary);
   font-family: 'Lato', sans-serif;
-  margin-bottom: 6rem;
+  margin-bottom: 4.5rem;
   text-align: center;
 }
 
@@ -500,21 +552,16 @@ header nav .branding {
 footer {
   background: var(--dark);
   text-align: center;
-  padding: 2rem 0;
+  padding: 2.6rem 0;
 }
 
 footer .copyright {
   color: var(--ternary);
+  font-size: 0.82rem;
 }
-
-footer .footer-socials {
-  margin-bottom: 3rem;
-  margin-right: -1rem;
-}
-
-footer .footer-socials a i {
-  color: var(--pure);
-  margin-left: 1rem;
+footer .copyright a{
+  text-decoration: none;
+  color: #3DCFD3;
 }
 
 /*mobile logo */
@@ -597,8 +644,8 @@ footer .footer-socials a i {
 }
 
 .times img {
-  color: var(--pure);
   width: 20px;
+  color:var(--pure);
 }
 
 .open {
@@ -667,21 +714,33 @@ footer .footer-socials a i {
   }
 }
 
-@media (max-width:576px) {
-  .mobile-nav {}
-
+@media (max-width:830px) {
+  .main-site-wrapper{
+    width:769px;
+  }
+  .container{
+    max-width: 818px;
+  }
   .hero {
     flex-direction: column;
   }
 
   header {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 68% 95%, 0 100%);
-    height: 633px;
+    height: 492px;
   }
-
+  header .hero .left{
+    width: 612px;
+  }
+  header .hero .left .video {
+   width: 100%;
+   opacity: 0.7;
+  }
   .hero .right {
     position: absolute;
     top: 185px;
+    width: 100%;
+    right: -36px;
     padding: 0 1.3rem;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.1));
   }
@@ -705,18 +764,44 @@ footer .footer-socials a i {
   }
 
   .about-image {
-    height: 300px;
+      height: 206px;
+      width: 146px;
   }
 
   .about .right {
     text-align: center;
     margin-top: 1.3rem;
+    margin-right: 25px;
+    margin-left: 25px;
   }
 
   .about .right .social {
     justify-content: center;
   }
-
+  .skills{
+    padding: 4rem;
+  }
+  .skills .container .skills-info .skills-logo .html {
+    height: 3.5rem;
+  }
+  .skills .container .skills-info .skills-logo .css {
+    height: 3.9rem;
+  }
+  .skills .container .skills-info .skills-logo .js {
+    height: 3.5rem;
+  }
+  .skills .container .skills-info .skills-logo .bootstrap {
+    height: 3.1rem;
+  }
+  .skills .container .skills-info .skills-logo .react {
+    height: 3.8rem;
+  }
+  .skills .container .skills-info .skills-logo .java {
+    height: 3.8rem;
+  }
+  .skills .container .skills-info .skills-logo .dbms {
+    height: 3.6rem;
+  }
   .services {
     padding: 1rem;
     padding-bottom: 3rem;
@@ -736,53 +821,186 @@ footer .footer-socials a i {
   .parallax {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 89%, 0 100%);
     padding-bottom: 0;
-    min-height: 367px;
+    min-height: 324px;
   }
 
   .parallax h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 1.2;
   }
 
   .parallax p {
     margin-top: 1.2rem;
   }
-
-  .work {
-    padding: 2rem 0;
+  .cert .section-paragraph {
+    margin-bottom: 2.5rem;
   }
-
-  .work .card-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+  .cert .container .cert-info img {
+    height: 6rem;
+    width: 5rem;
+    padding-right: 10px;
   }
-
-  .blog {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 71% 97%, 0 100%);
+  .cert strong{
+    font-size: 0.74rem;
+  }
+  .services{
+    padding-bottom: 5rem;
+  }
+  .services .card-wrapper .card{
+    padding: 4rem 1.2rem;
+  }
+  .services .card-wrapper .card img {
+    height: 83px;
+    top: -2rem;
+  }
+  .services .card-wrapper .card h2 {
+    font-size: 1.17rem;
+  }
+  .services .card-wrapper .card p {
+    font-size: 0.79rem;
+  }
+  .project{
     padding-bottom: 6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 95%, 0 100%);
   }
-
-  .blog .section-blog-heading {
-    padding-top: 3rem;
+  .project .section-project-heading {
+    padding-top: 3.5rem;
   }
-
-  .blog .card-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+  .project .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.9rem;
+    margin: 0 2rem;
   }
-
+  .project .card-wrapper .card .img-wrapper {
+    height: 14rem;
+}
+  .contact{
+  padding: 2rem 3rem;
+}
   .contact .card-wrapper .card h1 {
     font-size: 1rem;
   }
 
   .contact .section-paragraph {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   .contact .card-wrapper {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
   }
 
   .contact .input-wrap {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+@media (max-width: 417px){
+  .container {
+    max-width: 415px;
+}
+.main-site-wrapper{
+  width: 613px;
+}
+.hamberger {
+  display: block;
+  right: -167px;
+}
+header .hero .left {
+  width: 612px;
+  margin-right: 0rem;
+}
+.hero .right{
+  width: 127%;
+  right: -110px;
+  padding: 0 2.5rem;
+}
+.about-image{
+  margin-right: 4rem;
+  height: 194px;
+  width: 145px;
+}
+.about .social {
+  padding: 1.5rem 0;
+}
+.section-heading{
+  margin-bottom: 2.3rem;
+}
+.skills .section-paragraph {
+  font-size: 0.99rem;
+}
+.skills .container .skills-info .soft-skills {
+  padding: 0 54px;
+}
+.skills .container .skills-info .skills-logo {
+  margin-right: 15px;
+}
+.parallax{
+  min-height: 287px;
+}
+.parallax .container{
+  padding: 0;
+}
+.parallax h1{
+  font-size: 0.92rem;
+  margin-top: 5rem;
+}
+.cert{
+  padding: 4.1rem;
+}
+.cert .section-heading 
+{
+  font-size: 1rem;
+}
+.cert .section-heading {
+  margin-bottom: 1rem;
+}
+.cert .container .cert-info {
+  flex-direction: column;
+}
+.cert .container .cert-info img {
+  height: 5rem;
+  width: 4.5rem;
+  margin-bottom: 1rem;
+}
+.cert strong {
+  line-height: 1.4;
+  width: 116%;
+}
+.services .card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.services .section-heading{
+  padding-top: 2.5rem;
+}
+.services .section-paragraph{
+  margin-bottom: 5rem;
+}
+.project{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 71% 97%, 0 100%);
+}
+.project .card-wrapper {
+  grid-template-columns: repeat(1, 1fr);
+}
+.project .card-wrapper .card .img-wrapper {
+  height: 12rem;
+}
+.project .card-wrapper .card .card-content p {
+  font-size: 0.8rem;
+}
+.project .card-wrapper .card .card-content {
+  padding: 1.5rem 0.8rem;
+  height: 187px;
+}
+.section-heading {
+  margin-bottom: 1.3rem;
+}
+.contact .card-wrapper {
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+}
+.contact .section-paragraph{
+  margin-bottom: 3.4rem;
+}
 }
