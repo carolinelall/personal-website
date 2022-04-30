@@ -27,7 +27,7 @@ html {
 }
 .container {
   max-width: 1270px;
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -228,39 +228,10 @@ header nav .branding {
   display: flex;
   justify-content:center;
   align-items: center;
-  padding: 2rem 0;
   margin-top: 1rem;
 }
-.skills .container .skills-info .skills-logo .html{
-  height: 4.5rem;
-  width: 7.5rem;
-}
-.skills .container .skills-info .skills-logo .css{
-  height: 4.5rem;
-  width: 7rem;
-}
-.skills .container .skills-info .skills-logo .js{
-  height: 4.5rem;
-  width: 7rem;
-}
-.skills .container .skills-info .skills-logo .bootstrap{
-  height: 4.1rem;
-  width: 5.4rem;
-  margin:0 1rem;
-}
-.skills .container .skills-info .skills-logo .react{
-  height: 4.8rem;
-  width: 5.5rem;
-}
-.skills .container .skills-info .skills-logo .java{
-  height: 4.8rem;
-  width: 6rem;
-}
-.skills .container .skills-info .skills-logo .dbms{
-  height: 4.7rem;
-  width: 5rem;
-  border-radius:50px;
-  margin-left: 0.9rem;
+.skills .container .skills-info .skills-logo img{
+  width: 500px;
 }
 .skills .container .skills-info .soft-skills{
   color: var(--ternary);
@@ -627,7 +598,7 @@ footer .copyright a{
   font-family: 'Lato', sans-serif;
 }
 .m-navbar a:hover{
-  color: #3DCFD3;
+  color:#3DCFD3;
 }
 
 .times {
@@ -709,12 +680,15 @@ footer .copyright a{
   }
 }
 
-@media (max-width:830px) {
+@media (max-width:912px) {
   .main-site-wrapper{
-    width:830px;
+    width:770px;
   }
   .container{
-    max-width: 818px;
+    max-width: 673px;
+  }
+  #home .container{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../images/camera.png')center/cover no-repeat;
   }
   .hero {
     flex-direction: column;
@@ -724,32 +698,9 @@ footer .copyright a{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 68% 95%, 0 100%);
     height: 492px;
   }
-  header .hero .left{
-    width: 612px;
-  }
-  header .hero .left .video {
-   width: 100%;
-   opacity: 0.7;
-  }
-  .hero .right {
-    position: absolute;
-    top: 185px;
-    width: 100%;
-    right: -36px;
-    padding: 0 1.3rem;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.1));
-  }
-
-  header .hero .left img {
-    width: 235px;
-  }
-
-  .hero .left {
-    margin-top: 1.8rem;
-    margin-right: -8rem;
-    padding-bottom: 0;
-  }
-
+ header .hero .left{
+   display: none;
+ }
   .about {
     padding: 2rem;
   }
@@ -774,28 +725,13 @@ footer .copyright a{
     justify-content: center;
   }
   .skills{
-    padding: 4rem;
+    padding: 4rem 2rem;
   }
-  .skills .container .skills-info .skills-logo .html {
-    height: 3.5rem;
+  .skills .skills-logo{
+    display: none;
   }
-  .skills .container .skills-info .skills-logo .css {
-    height: 3.9rem;
-  }
-  .skills .container .skills-info .skills-logo .js {
-    height: 3.5rem;
-  }
-  .skills .container .skills-info .skills-logo .bootstrap {
-    height: 3.1rem;
-  }
-  .skills .container .skills-info .skills-logo .react {
-    height: 3.8rem;
-  }
-  .skills .container .skills-info .skills-logo .java {
-    height: 3.8rem;
-  }
-  .skills .container .skills-info .skills-logo .dbms {
-    height: 3.6rem;
+  .cert{
+    padding:4.3rem 2rem;
   }
   .services {
     padding: 1rem;
@@ -864,13 +800,13 @@ footer .copyright a{
   .project .card-wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.9rem;
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
   .project .card-wrapper .card .img-wrapper {
     height: 14rem;
 }
   .contact{
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
 }
   .contact .card-wrapper .card h1 {
     font-size: 1rem;
@@ -890,31 +826,42 @@ footer .copyright a{
   }
 }
 @media (max-width: 417px){
+  header{
+    height: 467px;
+  }
   .container {
-    max-width: 418px;
+    max-width: 355px;
+}
+#home .container{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../images/camera.png')center/cover no-repeat;
 }
 .main-site-wrapper{
   width: 415px;
 }
 .hamberger {
   display: block;
-  right: -16px;
-}
-header .hero .left {
-  width: 400px;
-  margin-right: -1rem;
-}
-.hero .right{
-  width: 106%;
-  right: -31px;
-  padding: 0 1rem;
+  right: 10px;
 }
 header .hero {
   padding-top: 2rem;
 }
-header .hero .right p {
-  font-size: 0.9rem;
+header .hero .right h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
+}
+header .hero .right p {
+  margin-bottom: 1.4rem;
+}
+header .hero .left{
+  display: none;
+}
+header .hero .left .video {
+  width: 267px;
+  height: 300px;
+  /* margin-bottom: 3rem; */
+}
+header .hero .right{
+  width: 348px;
 }
 .about-image{
   margin-right: 4rem;
@@ -941,31 +888,11 @@ header .hero .right p {
   padding: 0 54px;
   font-size: 0.94rem;
 }
-.skills .container .skills-info .skills-logo .html {
-    height: 2.5rem;
-}
-.skills .container .skills-info .skills-logo .css {
-  height: 2.9rem;
-}
-.skills .container .skills-info .skills-logo .js {
-  height: 2.5rem;
-}
-.skills .container .skills-info .skills-logo .bootstrap {
-  height: 2.1rem;
-  margin: 0 0.5rem;
-}
-.skills .container .skills-info .skills-logo .react {
-  height: 2.8rem;
-}
-.skills .container .skills-info .skills-logo .java {
-  height: 2.8rem;
-}
-.skills .container .skills-info .skills-logo .dbms {
-  height: 2.6rem;
-  margin-left: 0.7rem;
-}
 .skills .container .skills-info .skills-logo {
   margin-right: 15px;
+}
+.skills .container .skills-info .skills-logo img {
+  width: 292px;
 }
 .parallax{
   min-height: 287px;
@@ -981,7 +908,7 @@ header .hero .right p {
   font-size: 0.8rem;
 }
 .cert{
-  padding: 3.1rem;
+  padding: 3.1rem 2rem;
 }
 .cert .section-heading 
 {line-height: 1.2;
@@ -1002,8 +929,7 @@ header .hero .right p {
   margin-bottom: 1rem;
 }
 .cert strong {
-  line-height: 1.4;
-  width: 124%;
+  line-height: 1.43;
 }
 .services .card-wrapper {
   display: flex;
@@ -1025,6 +951,7 @@ header .hero .right p {
 }
 .project .card-wrapper {
   grid-template-columns: repeat(1, 1fr);
+  margin: 0;
 }
 .project .card-wrapper .card .img-wrapper {
   height: 12rem;
@@ -1039,6 +966,9 @@ header .hero .right p {
 .section-heading {
   margin-bottom: 1.3rem;
 }
+.contact{
+  padding: 2rem;
+}
 .contact .card-wrapper {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
@@ -1046,5 +976,11 @@ header .hero .right p {
 }
 .contact .section-paragraph{
   margin-bottom: 3.4rem;
+}
+.contact .card-wrapper .card i {
+  font-size: 1.5rem;
+}
+.contact .card-wrapper .card p {
+  font-size: 0.85rem;
 }
 }
