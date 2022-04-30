@@ -613,26 +613,21 @@ footer .copyright a{
   width: 140px;
 }
 
-.mobile-nav ul {
+.m-navbar{
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
-.mobile-nav ul li{
-   border-bottom: 1px solid #555;
-   cursor: pointer;
-   padding: 0 1rem;
-}
-.mobile-nav ul li a {
+
+.m-navbar a {
   color: var(--light);
   text-decoration: none;
   font-size: 1rem;
   line-height: 2.5;
   font-family: 'Lato', sans-serif;
 }
-.mobile-nav ul li:hover{
-  background-color: #5a5656b8;
-}
-.mobile-nav ul li:hover a{
-  color: var(--primary);
+.m-navbar a:hover{
+  color: #3DCFD3;
 }
 
 .times {
@@ -716,7 +711,7 @@ footer .copyright a{
 
 @media (max-width:830px) {
   .main-site-wrapper{
-    width:769px;
+    width:830px;
   }
   .container{
     max-width: 818px;
@@ -896,40 +891,78 @@ footer .copyright a{
 }
 @media (max-width: 417px){
   .container {
-    max-width: 415px;
+    max-width: 418px;
 }
 .main-site-wrapper{
-  width: 613px;
+  width: 415px;
 }
 .hamberger {
   display: block;
-  right: -167px;
+  right: -16px;
 }
 header .hero .left {
-  width: 612px;
-  margin-right: 0rem;
+  width: 400px;
+  margin-right: -1rem;
 }
 .hero .right{
-  width: 127%;
-  right: -110px;
-  padding: 0 2.5rem;
+  width: 106%;
+  right: -31px;
+  padding: 0 1rem;
+}
+header .hero {
+  padding-top: 2rem;
+}
+header .hero .right p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 .about-image{
   margin-right: 4rem;
   height: 194px;
-  width: 145px;
+  width: 137px;
+}
+.about p{
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
 .about .social {
   padding: 1.5rem 0;
+}
+.skills {
+  padding: 4rem 1rem;
 }
 .section-heading{
   margin-bottom: 2.3rem;
 }
 .skills .section-paragraph {
-  font-size: 0.99rem;
+  font-size: 0.94rem;
 }
 .skills .container .skills-info .soft-skills {
   padding: 0 54px;
+  font-size: 0.94rem;
+}
+.skills .container .skills-info .skills-logo .html {
+    height: 2.5rem;
+}
+.skills .container .skills-info .skills-logo .css {
+  height: 2.9rem;
+}
+.skills .container .skills-info .skills-logo .js {
+  height: 2.5rem;
+}
+.skills .container .skills-info .skills-logo .bootstrap {
+  height: 2.1rem;
+  margin: 0 0.5rem;
+}
+.skills .container .skills-info .skills-logo .react {
+  height: 2.8rem;
+}
+.skills .container .skills-info .skills-logo .java {
+  height: 2.8rem;
+}
+.skills .container .skills-info .skills-logo .dbms {
+  height: 2.6rem;
+  margin-left: 0.7rem;
 }
 .skills .container .skills-info .skills-logo {
   margin-right: 15px;
@@ -941,15 +974,21 @@ header .hero .left {
   padding: 0;
 }
 .parallax h1{
-  font-size: 0.92rem;
+  font-size: 0.8rem;
   margin-top: 5rem;
 }
+.parallax p{
+  font-size: 0.8rem;
+}
 .cert{
-  padding: 4.1rem;
+  padding: 3.1rem;
 }
 .cert .section-heading 
-{
+{line-height: 1.2;
   font-size: 1rem;
+}
+.cert .section-paragraph{
+  font-size: 0.9rem;
 }
 .cert .section-heading {
   margin-bottom: 1rem;
@@ -958,13 +997,13 @@ header .hero .left {
   flex-direction: column;
 }
 .cert .container .cert-info img {
-  height: 5rem;
-  width: 4.5rem;
+  height: 4rem;
+  width: 4rem;
   margin-bottom: 1rem;
 }
 .cert strong {
   line-height: 1.4;
-  width: 116%;
+  width: 124%;
 }
 .services .card-wrapper {
   display: flex;
@@ -972,9 +1011,14 @@ header .hero .left {
 }
 .services .section-heading{
   padding-top: 2.5rem;
+  padding-bottom: 13px;
 }
 .services .section-paragraph{
   margin-bottom: 5rem;
+}
+.services .card-wrapper .card{
+  height: 15rem;
+  width: 20rem;
 }
 .project{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 71% 97%, 0 100%);
